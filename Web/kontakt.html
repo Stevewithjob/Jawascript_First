@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — Autoservis Krkonoše</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container nav-row">
+    <a class="brand" href="index.html">Autoservis <span class="mark">Krkonoše</span></a>
+    <nav class="main">
+      <a href="index.html">Domů</a>
+      <a href="sluzby.html">Služby</a>
+      <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:56px;">
+  <div class="container" style="grid-template-columns: 1fr;">
+    <div>
+      <h1 style="font-size:clamp(1.8rem,3.6vw,2.5rem);">Domluvte si termín</h1>
+      <p class="lead">Napište pár slov k závadě nebo požadované práci, ozveme se zpět s termínem a orientační cenou.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container contact-grid">
+    <div>
+      <div class="section-head" style="border-bottom:none; margin-bottom:16px; padding-bottom:0;">
+        <h2>Kontaktní údaje</h2>
+      </div>
+      <dl class="info-list">
+        <dt>Telefon</dt>
+        <dd>+420 601 234 567</dd>
+        <dt>E-mail</dt>
+        <dd>info@autoservis-krkonose.cz</dd>
+        <dt>Adresa</dt>
+        <dd>Průmyslová 142, Jilemnice</dd>
+        <dt>Otevírací doba</dt>
+        <dd>Po–Pá 7:30–16:00</dd>
+      </dl>
+    </div>
+    <div>
+      <div class="section-head" style="border-bottom:none; margin-bottom:16px; padding-bottom:0;">
+        <h2>Poptávkový formulář</h2>
+      </div>
+      <form class="contact">
+        <div>
+          <label for="jmeno">Jméno a příjmení</label>
+          <input type="text" id="jmeno" name="jmeno" placeholder="Jan Novák">
+        </div>
+        <div>
+          <label for="telefon">Telefon</label>
+          <input type="tel" id="telefon" name="telefon" placeholder="+420 xxx xxx xxx">
+        </div>
+        <div>
+          <label for="zprava">Popis závady nebo požadavku</label>
+          <textarea id="zprava" name="zprava" placeholder="Např. Škoda Octavia II, divný zvuk při brzdění..."></textarea>
+        </div>
+        <button type="submit">Odeslat poptávku</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="container">
+    <span>© 2026 Autoservis Krkonoše</span>
+    <span>Jilemnicko · na objednávku i bez objednání</span>
+  </div>
+</footer>
+
+</body>
+</html>

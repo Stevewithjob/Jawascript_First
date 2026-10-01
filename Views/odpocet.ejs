@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odpočet do 15:00</title>
+<style>
+  body {
+    font-family: sans-serif;
+    background: #1c2024;
+    color: #f3f1ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  h1 { margin-bottom: 10px; }
+  #countdown {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e0972e;
+    letter-spacing: 2px;
+  }
+  a {
+    margin-top: 30px;
+    color: #f3f1ec;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Do 15:00 zbývá</h1>
+  <div id="countdown"><%= cas %></div>
+  <a href="/">Zpět na úvodní stránku</a>
+
+</body>
+</html>
