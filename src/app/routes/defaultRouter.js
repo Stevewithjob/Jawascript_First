@@ -1,6 +1,9 @@
 // vytvoreni routeru (expressova miniaplikace)
 const router = require('express').Router();
 
+// routovani ohledne clanku obstarava samostatny router
+router.use('/items', require('./itemsRouter'));
+
 // reakce na custom URL, ktere server obsluhuje
 router.get(['/', '/index'], (req, res) => {
 	res.render('index', {
@@ -20,13 +23,6 @@ router.get('/kontakt', (req, res) => {
 
 router.get('/sluzby', (req, res) => {
 	res.render('sluzby');
-});
-
-router.get('/items', (req, res) => {
-	res.render('items', {
-		titulek: 'Články',
-		clanky: model.nacistClanky(),
-	});
 });
 
 // odchyceni neznamych URL
