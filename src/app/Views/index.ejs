@@ -70,6 +70,24 @@
 </section>
 
 <section class="alt">
+    <h1><%= titulek %></h1>
+
+    <p>
+        Čus Bus <i>(<%= jmeno %>)</i>
+    </p>
+
+    <p>
+        Ode dne <b><%= cas.toLocaleDateString() %></b>
+    </p>
+
+    <% if (cas.getHours() == 14 && cas.getMinutes() >= 45) { %>
+        <p>Do konce hodiny zbývá méně než <b>15 minut!</b></p>
+    <% } %>
+</section>
+  
+  
+
+<section class="alt">
   <div class="container">
     <div class="section-head">
       <h2>Na čem právě pracujeme</h2>

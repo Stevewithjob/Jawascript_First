@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+    <title><%= titulek %></title>
+</head>
+<body>
+	<h1><%= titulek %></h1>
+
+    <form action="/items/new" method="post">
+        <input type="text" name="nazev" placeholder="Název článku..." required><br />
+        <textarea name="obsah" placeholder="Obsah článku..." required></textarea><br />
+        <input type="submit" value="Přidat článek" />
+    </form>
+
+    <% if(typeof clanky == 'undefined' || clanky.length == 0) { %>
+        <p>Žádné články k zobrazení.</p>
+    <% } else { %>
+    <% for(let i = clanky.length - 1; i >= 0; i--) { %>
+        <div id="prispevek-<%= clanky[i].id %>">
+            <h2><%= clanky[i].nazev %></h2>
+            <p><%= clanky[i].obsah %></p>
+            <a href="/items/delete/<%=clanky[i].id %>">smazat <%= clanky[i].nazev.toLowerCase() %></a>
+        </div>
+    <% }} %>
+</body>
+</html>
