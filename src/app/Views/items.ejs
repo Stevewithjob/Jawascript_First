@@ -6,24 +6,49 @@
 	<link rel="stylesheet" href="style.css" />
     <title><%= titulek %></title>
 </head>
+
+<header class="site">
+  <div class="container nav-row">
+    <a class="brand" href="index.ejs">Autoservis <span class="mark">Krkonoše</span></a>
+    <nav class="main">
+      <a href="index" class="active">Domů</a>
+      <a href="sluzby">Služby</a>
+      <a href="kontakt">Kontakt</a>
+      <a href="items">Clanky</a>
+    </nav>
+  </div>
+</header>
+
 <body>
-	<h1><%= titulek %></h1>
-
-    <form action="/items/new" method="post">
-        <input type="text" name="nazev" placeholder="Název článku..." required><br />
-        <textarea name="obsah" placeholder="Obsah článku..." required></textarea><br />
-        <input type="submit" value="Přidat článek" />
-    </form>
-
-    <% if(typeof clanky == 'undefined' || clanky.length == 0) { %>
-        <p>Žádné články k zobrazení.</p>
-    <% } else { %>
-    <% for(let i = clanky.length - 1; i >= 0; i--) { %>
-        <div id="prispevek-<%= clanky[i].id %>">
-            <h2><%= clanky[i].nazev %></h2>
-            <p><%= clanky[i].obsah %></p>
-            <a href="/items/delete/<%=clanky[i].id %>">smazat <%= clanky[i].nazev.toLowerCase() %></a>
+    <section class="hero" style="padding-bottom:56px;">
+        <div class="container" style="grid-template-columns: 1fr;">
+            <div>
+                <h1 style="font-size:clamp(1.8rem,3.6vw,2.5rem);">Články o našich službách</h1>
+                <p class="lead">Zde najdete informace o našich službách a cenách.</p>
+            </div>
         </div>
-    <% }} %>
+    </section>
+
+    <section>
+        <div class="container contact-grid">
+            <form action="/items/new" method="post">
+                <input type="text" name="nazev" placeholder="Název článku..." required><br />
+                <textarea name="obsah" placeholder="Obsah článku..." required></textarea><br />
+                <input type="submit" value="Přidat článek" />
+            </form>
+
+            <% if(typeof clanky == 'undefined' || clanky.length == 0) { %>
+                <p>Žádné články k zobrazení.</p>
+            <% } else { %>
+            <% for(let i = clanky.length - 1; i >= 0; i--) { %>
+                <div id="prispevek-<%= clanky[i].id %>">
+                    <h2><%= clanky[i].nazev %></h2>
+                    <p><%= clanky[i].obsah %></p>
+                    <a href="/items/delete/<%=clanky[i].id %>">smazat <%= clanky[i].nazev.toLowerCase() %></a>
+                </div>
+            <% }} %>
+        </div>
+    </section>
+
 </body>
 </html>
