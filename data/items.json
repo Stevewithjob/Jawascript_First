@@ -1,12 +1,7 @@
 [
     {
-        "id": 4,
-        "nazev": "Ahoj",
-        "obsah": "neser mě"
-    },
-    {
-        "id": 5,
-        "nazev": "neee",
-        "obsah": "joooo"
+        "id": 1,
+        "nazev": "Náhradní díly",
+        "obsah": "Autoservis má všechny náhradní díly na škoda fabie 2. generace"
     }
 ]
