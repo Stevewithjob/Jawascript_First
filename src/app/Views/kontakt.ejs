@@ -10,17 +10,7 @@
 </head>
 <body>
 
-<header class="site">
-  <div class="container nav-row">
-    <a class="brand" href="index.ejs">Autoservis <span class="mark">Krkonoše</span></a>
-    <nav class="main">
-      <a href="index" class="active">Domů</a>
-      <a href="sluzby">Služby</a>
-      <a href="kontakt">Kontakt</a>
-      <a href="items">Clanky</a>
-    </nav>
-  </div>
-</header>
+<%- include('partials/header') %>
 
 <section class="hero" style="padding-bottom:56px;">
   <div class="container" style="grid-template-columns: 1fr;">
@@ -71,12 +61,7 @@
   </div>
 </section>
 
-<footer class="site">
-  <div class="container">
-    <span>© 2026 Autoservis Krkonoše</span>
-    <span>Jilemnicko · na objednávku i bez objednání</span>
-  </div>
-</footer>
+<%- include('partials/footer') %>
 
 </body>
 </html>

@@ -8,5 +8,10 @@
         "id": 2,
         "nazev": "Pepa má volno ",
         "obsah": "Kdo mu přiveze káru na opravu bude mít slevu 30%, a to se vyplatí"
+    },
+    {
+        "id": 3,
+        "nazev": "ahij",
+        "obsah": "mahi"
     }
 ]
