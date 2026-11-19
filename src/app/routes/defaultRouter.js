@@ -4,6 +4,9 @@ const router = require('express').Router();
 // routovani ohledne clanku obstarava samostatny router
 router.use('/items', require('./itemsRouter'));
 
+// routovani ohledne uzivatelu obstarava samostatny router
+router.use('/users', require('./usersRouter'));
+
 // reakce na custom URL, ktere server obsluhuje
 router.get(['/', '/index'], (req, res) => {
 	res.render('index', {

@@ -1,5 +1,7 @@
 // instalace balicku s knihovnou Express
 const express = require('express');
+// instalace baliku s podporou sessions
+const session = require('express-session');
 // vytvoreni aplikace
 const app = express();
 
@@ -7,6 +9,13 @@ const app = express();
 app.set('view engine', 'ejs');
 // nastaveni slozky se sablonami
 app.set('views', './app/views');
+
+// nastaveni session
+app.use(session({
+    secret: require('dotenv').config().parsed.SECRET,
+    resave: false,
+    saveUninitialized: true,
+}));
 
 // povoleny prijem dat z formularu
 app.use(express.urlencoded({ extended: false }));
